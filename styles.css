@@ -1,0 +1,50 @@
+:root{--navy:#0f172a;--accent:#0f766e;--accent-dark:#115e59;--bg:#f5f7f9;--card:#fff;--line:#e2e8f0;--muted:#64748b;
+  --bs-primary:#0f766e;--bs-primary-rgb:15,118,110;--bs-body-color:#0f172a;--bs-link-color:#0f766e;--bs-link-hover-color:#115e59}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--navy);font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;overflow-x:hidden}
+section[id],header[id]{scroll-margin-top:76px}
+.text-muted{color:var(--muted)!important}
+.btn-primary{--bs-btn-bg:#0f766e;--bs-btn-border-color:#0f766e;--bs-btn-hover-bg:#115e59;--bs-btn-hover-border-color:#115e59;--bs-btn-active-bg:#134e4a;--bs-btn-active-border-color:#134e4a;--bs-btn-disabled-bg:#0f766e;--bs-btn-disabled-border-color:#0f766e;--bs-btn-focus-shadow-rgb:15,118,110}
+.btn{min-height:40px}
+:focus-visible{outline:3px solid #0d9488;outline-offset:2px}
+.skip-link{position:absolute;left:8px;top:8px;z-index:2000;background:#fff;padding:8px 12px;border-radius:8px}
+#scrollProgress{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--accent);transform:scaleX(0);transform-origin:left;z-index:1100}
+.app-nav{background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.app-nav .navbar-brand{color:var(--navy)}.app-nav .navbar-brand i{color:var(--accent)}
+.app-nav .nav-link{color:var(--navy);min-height:44px;display:flex;align-items:center}.app-nav .nav-link:hover{color:var(--accent)}
+.hero{padding:3rem 0 2rem;max-width:680px}
+.hero h1{font-size:clamp(1.75rem,4.5vw,2.6rem);font-weight:700;letter-spacing:-.02em}
+.hero .lead{color:var(--muted);font-size:1.05rem}
+.panel,.stat-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.25rem;box-shadow:0 1px 2px rgba(15,23,42,.04)}
+.stat-card{transition:transform .2s ease,box-shadow .2s ease}
+.stat-card:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(15,23,42,.08)}
+.stat-label{font-size:.85rem;color:var(--muted)}
+.stat-value{font-size:clamp(1.25rem,3.2vw,1.8rem);font-weight:700;margin:.15rem 0;overflow-wrap:anywhere}
+.stat-value.stat-text{font-size:clamp(1.1rem,2.6vw,1.4rem)}
+.stat-sub{font-size:.8rem;color:var(--muted)}
+.form-label{font-weight:500;font-size:.9rem}
+.form-control,.form-select{min-height:44px}
+.form-control:focus,.form-select:focus{border-color:var(--accent);box-shadow:0 0 0 .2rem rgba(15,118,110,.2)}
+.invalid-feedback{font-size:.85rem}
+.chart-box{position:relative;height:280px}.chart-box-sm{height:240px}
+.empty-state{text-align:center;padding:2.5rem 1rem}.empty-state i{font-size:2.5rem;color:var(--accent)}.empty-state p{color:var(--muted);margin:.5rem 0 1rem}
+.table thead th{font-size:.8rem;color:var(--muted);font-weight:600;border-bottom:1px solid var(--line);background:#f8fafc}
+.table tbody td{padding:.8rem .75rem}
+.cat-badge{display:inline-flex;align-items:center;gap:.4rem;padding:.2rem .6rem;border-radius:999px;font-size:.85rem;background:#f1f5f9;background:color-mix(in srgb,var(--c,#64748b) 12%,white);white-space:nowrap}
+.cat-badge i{color:var(--c,#64748b)}
+.tx-card{padding:1rem;border-bottom:1px solid var(--line)}.tx-card:last-child{border-bottom:0}
+.flash{animation:flash 1.2s ease}
+@keyframes flash{from{background:#ccfbf1}to{background:transparent}}
+.progress{height:8px;background:#e2e8f0}
+.app-footer{border-top:1px solid var(--line);padding:1.5rem 0;color:var(--muted);background:#fff}
+#toasts{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:1200;display:grid;gap:8px;width:min(92vw,420px)}
+.toast-msg{background:#fff;border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:10px;padding:.7rem 1rem;box-shadow:0 8px 24px rgba(15,23,42,.15);animation:pop .2s ease}
+.toast-msg.danger{border-left-color:#b91c1c}.toast-msg.warning{border-left-color:#b45309}
+@keyframes pop{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.js .reveal{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease;transition-delay:var(--d,0s)}
+.js .reveal.visible{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .reveal{opacity:1;transform:none}
+}

@@ -1,0 +1,12 @@
+{
+  "categories": [
+    { "id": "food", "name": "Food", "icon": "cup-hot" },
+    { "id": "travel", "name": "Travel", "icon": "bus-front" },
+    { "id": "education", "name": "Education", "icon": "book" },
+    { "id": "shopping", "name": "Shopping", "icon": "bag" },
+    { "id": "bills", "name": "Bills", "icon": "receipt" },
+    { "id": "entertainment", "name": "Entertainment", "icon": "film" },
+    { "id": "health", "name": "Health", "icon": "heart-pulse" },
+    { "id": "other", "name": "Other", "icon": "three-dots" }
+  ]
+}
